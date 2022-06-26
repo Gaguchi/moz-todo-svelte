@@ -1,9 +1,22 @@
 <script>
 	export let name;
+	export let name2;
+
+	function toggleName() {
+		if (name === 'Betochka'){
+			name = 'Gaguchi';
+			name2 = 'Betochka';
+		}else if (name === 'Gaguchi'){
+			name = 'Betochka';
+			name2 = 'Gaguchi';
+		}
+	}
+	
 </script>
 
 <main>
-	<h1>Hello {name} from Gaguchi!</h1>
+	<h1>Hello {name} from {name2}</h1>
+	<button on:click={toggleName}>toggle name</button>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
